@@ -1,0 +1,24 @@
+/* ── Precio destacado ────────────────────────────────────────────────────── */
+.big-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #10b981;
+    margin: 0 0 16px;
+}
+
+/* ── Rumores ─────────────────────────────────────────────────────────────── */
+.rumor-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+.rumor-club        { font-weight: 700; }
+.rumor-source      { color: #64748b; }
+.rumor-reliability { background: #fef9c3; color: #92400e; padding: 2px 8px; border-radius: 4px; }
+.rumor-date        { color: #94a3b8; margin-left: auto; }

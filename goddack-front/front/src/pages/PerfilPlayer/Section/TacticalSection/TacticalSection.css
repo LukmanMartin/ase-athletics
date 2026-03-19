@@ -1,0 +1,44 @@
+/* ── Heatmap de zonas ────────────────────────────────────────────────────── */
+.heatmap-zones {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.zone-item {
+    display: grid;
+    grid-template-columns: 130px 1fr 42px;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: #475569;
+    font-family: 'Inter', sans-serif;
+}
+.zone-bar-wrap {
+    background: #f1f5f9;
+    border-radius: 9999px;
+    height: 8px;
+    overflow: hidden;
+}
+.zone-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+    border-radius: 9999px;
+    transition: width 0.4s ease;
+}
+
+/* ── Descripción de estilo ───────────────────────────────────────────────── */
+.style-desc {
+    margin-top: 12px;
+    font-size: 0.875rem;
+    color: #475569;
+    line-height: 1.6;
+    background: #f9fafb;
+    padding: 12px 14px;
+    border-radius: 0.375rem;
+    border-left: 3px solid #0ea5e9;
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 640px) {
+    .zone-item { grid-template-columns: 100px 1fr 36px; font-size: 0.8rem; }
+}

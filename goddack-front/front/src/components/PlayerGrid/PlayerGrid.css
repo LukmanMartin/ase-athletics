@@ -1,0 +1,72 @@
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+/* ── Estados ─────────────────────────────────────────────────────────────── */
+.pg-loading,
+.pg-error,
+.pg-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    padding: 64px 20px;
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+.pg-error { color: #ef4444; }
+
+/* ── Agrupados ───────────────────────────────────────────────────────────── */
+.grouped-results {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.group-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+}
+
+.group-count {
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 9999px;
+}
+
+.pg-empty {
+    color: #94a3b8;
+    font-style: italic;
+    font-size: 0.875rem;
+    padding: 20px 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .players-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+}
+
+@media (max-width: 640px) {
+    .players-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+}
+
+@media (max-width: 400px) {
+    .players-grid { grid-template-columns: 1fr; }
+}

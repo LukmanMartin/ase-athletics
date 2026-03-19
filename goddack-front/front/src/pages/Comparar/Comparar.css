@@ -1,0 +1,185 @@
+.comp-page {
+    background: #f1f5f9;
+    min-height: 100vh;
+}
+
+.comp-container {
+    padding: 28px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ── Empty ───────────────────────────────────────────────────────────────── */
+.comp-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    gap: 20px;
+    color: #64748b;
+}
+.comp-empty button {
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.comp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.comp-header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+.comp-header__actions {
+    display: flex;
+    gap: 10px;
+}
+.comp-btn-clear {
+    background: none;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.87rem;
+    transition: all 0.2s;
+}
+.comp-btn-clear:hover { border-color: #ef4444; color: #ef4444; }
+
+.comp-btn-back {
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.87rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.comp-btn-back:hover { background: #0284c7; }
+
+/* ── Tarjetas de jugadores ───────────────────────────────────────────────── */
+.comp-players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.comp-player-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #0ea5e9;
+    position: relative;
+}
+.comp-player-remove {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+.comp-player-remove:hover { color: #ef4444; }
+
+.comp-player-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.comp-player-card h3 {
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+    color: #1e293b;
+    font-weight: 700;
+}
+.comp-player-card p {
+    margin: 0 0 8px;
+    font-size: 0.82rem;
+    color: #64748b;
+}
+.comp-player-pos {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* ── Cards ───────────────────────────────────────────────────────────────── */
+.comp-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+.comp-card h2 {
+    margin: 0 0 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+/* ── Tabla comparativa ───────────────────────────────────────────────────── */
+.comp-table-wrap {
+    overflow-x: auto;
+}
+.comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+.comp-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: #f8fafc;
+    font-weight: 700;
+    font-size: 0.82rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+.comp-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-table tr:hover td { background: #f8fafc; }
+.comp-table__label {
+    color: #64748b;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .comp-container { padding: 16px; }
+    .comp-header { flex-direction: column; align-items: flex-start; }
+}

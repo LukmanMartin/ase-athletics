@@ -1,0 +1,281 @@
+.player-filters {
+    background: var(--filters-bg, #1e293b);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    border: 1px solid #334155;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ── Top bar ─────────────────────────────────────────────────────────────── */
+.filters-top {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #f1f5f9;
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.search-bar:focus { border-color: #0ea5e9; }
+.search-bar::placeholder { color: #475569; }
+
+.sort-select {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #f1f5f9;
+    font-size: 0.88rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.15s;
+    min-width: 180px;
+}
+
+.sort-select:focus { border-color: #0ea5e9; }
+.sort-select option { background: #1e293b; }
+
+.btn-toggle-filters {
+    background: #334155;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-toggle-filters:hover,
+.btn-toggle-filters.active {
+    background: #0ea5e9;
+    border-color: #0ea5e9;
+    color: white;
+}
+
+.filters-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10b981;
+    flex-shrink: 0;
+}
+
+/* ── Advanced filters ────────────────────────────────────────────────────── */
+.advanced-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 4px;
+    border-top: 1px solid #334155;
+    animation: fadeInDown 0.15s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.filters-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.filters-row select {
+    flex: 1;
+    min-width: 160px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 9px 12px;
+    color: #f1f5f9;
+    font-size: 0.88rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+
+.filters-row select:focus { border-color: #0ea5e9; }
+.filters-row select option { background: #1e293b; }
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.filter-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.filter-group input {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 9px 12px;
+    color: #f1f5f9;
+    font-size: 0.88rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.15s;
+}
+
+.filter-group input:focus { border-color: #0ea5e9; }
+.filter-group input::placeholder { color: #475569; }
+
+.range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.range-inputs input {
+    flex: 1;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 9px 10px;
+    color: #f1f5f9;
+    font-size: 0.88rem;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.range-inputs input:focus { border-color: #0ea5e9; }
+.range-inputs input::placeholder { color: #475569; }
+.range-inputs span { color: #475569; font-size: 0.9rem; flex-shrink: 0; }
+
+.filters-actions {
+    display: flex;
+    gap: 10px;
+    padding-top: 4px;
+}
+
+.btn-apply {
+    background: #0ea5e9;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 20px;
+    color: white;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-apply:hover { background: #0284c7; }
+
+.btn-clear-all {
+    background: transparent;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 9px 16px;
+    color: #94a3b8;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.btn-clear-all:hover { background: #1e293b; color: #e2e8f0; }
+
+/* ── Active filter badges ─────────────────────────────────────────────────── */
+.active-filters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-top: 4px;
+    border-top: 1px solid #334155;
+}
+
+.active-filters-label {
+    font-size: 0.78rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.filter-tag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #0ea5e9;
+    color: white;
+    border-radius: 999px;
+    padding: 4px 10px 4px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.filter-tag button {
+    background: rgba(255,255,255,0.25);
+    border: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    color: white;
+    font-size: 0.65rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    transition: background 0.1s;
+}
+
+.filter-tag button:hover { background: rgba(255,255,255,0.4); }
+
+.filter-clear {
+    background: transparent;
+    border: 1px solid #334155;
+    border-radius: 999px;
+    padding: 4px 12px;
+    color: #94a3b8;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-left: auto;
+}
+
+.filter-clear:hover { background: #334155; color: #e2e8f0; }
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .filters-top { flex-wrap: wrap; }
+    .sort-select { min-width: 100%; }
+    .btn-toggle-filters { width: 100%; justify-content: center; }
+    .filters-row { flex-direction: column; }
+    .filter-group { min-width: 100%; }
+}
