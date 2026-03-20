@@ -71,3 +71,28 @@
     .stats-row { gap: 8px; }
     .stat-box  { min-width: 70px; }
 }
+
+@media (max-width: 480px) {
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    .stat-box {
+        min-width: unset;
+        padding: 10px 6px;
+    }
+    .stat-box__val {
+        font-size: 1rem;
+    }
+    .stat-box__label {
+        font-size: 0.65rem;
+    }
+    .data-table {
+        font-size: 0.75rem;
+    }
+    .data-table th,
+    .data-table td {
+        padding: 6px 6px;
+    }
+}
